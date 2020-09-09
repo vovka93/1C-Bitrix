@@ -1,7 +1,4 @@
 <?
-ini_set("display_errors", true);
-error_reporting(E_ALL);
-
 if ($_SERVER["REQUEST_METHOD"] !== "POST") die();
 if (!require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php")) die('prolog_before.php not found!');
 if (CModule::IncludeModule('sale')) {

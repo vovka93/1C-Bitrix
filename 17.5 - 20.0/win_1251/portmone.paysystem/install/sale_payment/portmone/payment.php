@@ -1,6 +1,6 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-include dirname(__FILE__) . "/portmone.php";
+require_once dirname(__FILE__) . "/portmone.php";
 $formValid = Portmone::isPaymentValid($GLOBALS['SALE_INPUT_PARAMS']['ORDER']['ID']);
 if ($formValid == '') {
     $formFields = array(
