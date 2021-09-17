@@ -64,7 +64,7 @@ if (CModule::IncludeModule('sale')) {
             "PS_STATUS_CODE"        => $answer,
             "PS_STATUS_DESCRIPTION" => ($answer != Portmone::ORDER_PAYED ? $_POST['RESULT'] : ''),
             "PS_STATUS_MESSAGE"     => ' - ',
-            "PS_SUM"                => $parseXml->orders->order->bill_amount,
+            "PS_SUM"                => (string) $parseXml->orders->order->bill_amount,
             "PS_CURRENCY"           => 'UAH',
             "PS_RESPONSE_DATE"      => date("d.m.Y H:i:s")
         );
